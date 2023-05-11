@@ -1,5 +1,7 @@
 package jdbc.service;
 
+import jdbc.dao.UserDao;
+import jdbc.dao.UserDaoJDBCImpl;
 import jdbc.model.User;
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,9 +9,10 @@ import org.junit.Test;
 import java.util.List;
 
 public class UserServiceTest {
-    private final UserService userService = new UserServiceImpl();
+    private final UserDao userDaoJdbcImpl = new UserDaoJDBCImpl();
+    private final UserService userService = new UserServiceImpl(userDaoJdbcImpl);
 
-    private final String testFirstName = "Ivan";
+    private final String testName = "Ivan";
     private final String testLastName = "Ivanov";
     private final byte testAge = 5;
 
@@ -39,11 +42,11 @@ public class UserServiceTest {
         try {
             userService.dropUsersTable();
             userService.createUsersTable();
-            userService.saveUser(testFirstName, testLastName, testAge);
+            userService.saveUser(testName, testLastName, testAge);
 
             User user = userService.getAllUsers().get(0);
 
-            if (!testFirstName.equals(user.getFirstName())
+            if (!testName.equals(user.getFirstName())
                     || !testLastName.equals(user.getLastName())
                     || testAge != user.getAge()
             ) {
@@ -60,7 +63,7 @@ public class UserServiceTest {
         try {
             userService.dropUsersTable();
             userService.createUsersTable();
-            userService.saveUser(testFirstName, testLastName, testAge);
+            userService.saveUser(testName, testLastName, testAge);
             userService.removeUserById(1L);
         } catch (Exception e) {
             Assert.fail("При тестировании удаления пользователя по id произошло исключение\n" + e);
@@ -72,7 +75,7 @@ public class UserServiceTest {
         try {
             userService.dropUsersTable();
             userService.createUsersTable();
-            userService.saveUser(testFirstName, testLastName, testAge);
+            userService.saveUser(testName, testLastName, testAge);
             List<User> userList = userService.getAllUsers();
 
             if (userList.size() != 1) {
@@ -88,7 +91,7 @@ public class UserServiceTest {
         try {
             userService.dropUsersTable();
             userService.createUsersTable();
-            userService.saveUser(testFirstName, testLastName, testAge);
+            userService.saveUser(testName, testLastName, testAge);
             userService.cleanUsersTable();
 
             if (userService.getAllUsers().size() != 0) {

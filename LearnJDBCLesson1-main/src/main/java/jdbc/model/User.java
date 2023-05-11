@@ -1,10 +1,8 @@
 package jdbc.model;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
+
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@Builder
+
 public class User {
     private Long id;
 
@@ -57,13 +55,13 @@ public class User {
         this.age = age;
     }
 
-    @Override
+   @Override
     public String toString() {
-        return "User{" +
+       return "User{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+               ", firstName='" + firstName + '\'' +
+               ", lastName='" + lastName + '\'' +
                 ", age=" + age +
-                '}';
+               '}';
     }
 }
