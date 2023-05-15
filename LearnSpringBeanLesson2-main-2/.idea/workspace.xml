@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63a45c57-4eed-4983-bf45-121ce132cff8" name="Changes" comment="Init">
-      <change beforePath="$PROJECT_DIR$/../LeranSpringBean-main/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LeranSpringBean-main/.idea/misc.xml" afterDir="false" />
-    </list>
+    <list default="true" id="63a45c57-4eed-4983-bf45-121ce132cff8" name="Changes" comment="Init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +41,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "2ea307f8d2d9576fc2cec327481ec50d"
   }
 }]]></component>
   <component name="RunManager">
@@ -76,6 +75,7 @@
       <updated>1681207639511</updated>
       <workItem from="1681207641176" duration="2390000" />
       <workItem from="1681216108692" duration="304000" />
+      <workItem from="1683788644090" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1681209256361</created>
