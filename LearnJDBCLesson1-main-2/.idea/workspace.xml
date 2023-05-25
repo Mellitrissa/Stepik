@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1b4ebe2-c827-4ea2-bbe2-81e27f005fb6" name="Changes" comment="Init">
-      <change beforePath="$PROJECT_DIR$/../LearnSpringBeanLesson2-main-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnSpringBeanLesson2-main-2/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b1b4ebe2-c827-4ea2-bbe2-81e27f005fb6" name="Changes" comment="Init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +121,7 @@
       <updated>1681213399902</updated>
       <workItem from="1681213401308" duration="2218000" />
       <workItem from="1683788707648" duration="23459000" />
-      <workItem from="1683907995164" duration="10660000" />
+      <workItem from="1683907995164" duration="10910000" />
     </task>
     <servers />
   </component>

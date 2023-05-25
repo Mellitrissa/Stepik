@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+<persistence-unit name="persistence">
+    <description>Hibernate EntityManager </description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>org.hiber.model.User</class>
+    <class>org.hiber.model.Car</class>
+    <properties>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.PostgresPlusDialect"/>
+        <property name="hibernate.hbm2ddl.auto" value="update"/>
+        <property name="hibernate.show_sql" value="true" />
+        <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/mypersons?currentSchema=persons"/>
+        <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+        <property name="jakarta.persistence.jdbc.password" value="U08101991a!"/>
+    </properties>
+</persistence-unit>
+</persistence>
