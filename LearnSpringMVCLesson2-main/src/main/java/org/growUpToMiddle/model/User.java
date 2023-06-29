@@ -22,5 +22,10 @@ public class User {
     private String email;
     @OneToMany (mappedBy = "user",fetch = FetchType.EAGER)
     private List <Car> cars;
+    public User(String firstName,String lastName,String email){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
 }
