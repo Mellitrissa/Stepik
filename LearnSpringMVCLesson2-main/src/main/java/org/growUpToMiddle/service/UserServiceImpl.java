@@ -1,22 +1,23 @@
 package org.growUpToMiddle.service;
 
 import org.growUpToMiddle.dao.UserDao;
+import org.growUpToMiddle.dao.UserDaoImpl;
 import org.growUpToMiddle.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    private final UserDao userDao;
-    public UserServiceImpl(UserDao userDao) {
-        this.userDao = userDao;
-    }
+    @Autowired
+    private UserDao userDao;
     @Override
     public List<User> getAllUsers() {
         return userDao.getAllUsers();
     }
 
     @Override
-    public void saveUser(Long userId,User user) {
+    public void updateUser(Long userId,User user) {
+        userDao.updateUser(userId, user);
     }
 
     @Override
@@ -26,9 +27,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(User user) {
+        userDao.addUser(user);
     }
 
     @Override
     public void deleteUser(Long id) {
+        userDao.deleteUser(id);
     }
 }

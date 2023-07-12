@@ -9,22 +9,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
-<p th:text="${user.firstName} ${user.lastName}"/>
-<p th:text="${user.email}"/>
-<form action="/users/${user.id}/update" method="post">
+<form action="#" th:object="${user}" method="post">
+  <table >
+    <tr>
+      <td>User ID:</td>
+      <td><input type="text" th:field="*{id}" readonly="readonly"></td>
+    </tr>
+    <tr>
+      <td>User Name:</td>
+      <td><input type="text" th:field="*{firstName}"></td>
+      <td>User LastName:</td>
+      <td><input type="text" th:field="*{lastName}"></td>
+      <td>User Email:</td>
+      <td><input type="text" th:field="*{email}"></td>
+
+
+    </tr>
+  </table>
+</form>
+
+<form action="/user/${id}/update" method="post">
   <label>
     Email
-    <input type="email" name="email" value=${user.email}>
+    <input type="email" name="email" th:value="${user.email}">
   </label>
   <br>
   <label>
     Имя
-    <input type="text" name="firstName" value=${user.firstName}>
+    <input type="text" name="firstName" th:value="${user.firstName}">
   </label>
   <br>
   <label>
     Фамилия
-    <input type="text" name="lastName" value=${user.lastName}>
+    <input type="text" name="lastName" th:value="${user.lastName}">
   </label>
   <br>
   <input type="submit" value="Сохранить">
